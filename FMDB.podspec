@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
 
   # use SQLCipher (which replaces sqlite3) and enable -DSQLITE_HAS_CODEC flag
   s.subspec 'SQLCipher' do |ss|
-    ss.dependency 'SQLCipher', '~> 4.0'
+    ss.dependency 'SQLCipher', '~> 4.0', :inhibit_warnings => true
     ss.source_files = 'src/fmdb/FM*.{h,m}'
     ss.exclude_files = 'src/fmdb.m'
     
